@@ -11,6 +11,7 @@ def process_image(image):
         cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5
     )
     net = cv2.dnn.readNetFromCaffe(PROTOTXT, MODEL)
+
     net.setInput(blob)
     detections = net.forward()
     return detections
