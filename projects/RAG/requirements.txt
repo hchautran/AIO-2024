@@ -1,0 +1,11 @@
+transformers==4.41.2
+bitsandbytes
+accelerate 
+langchain
+langchainhub 
+langchain-chroma
+langchain-community
+langchain_huggingface
+python-dotenv==1.0.1
+pypdf==4.2.0
+numpy==1.24.4
