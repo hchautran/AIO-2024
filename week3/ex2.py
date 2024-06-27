@@ -7,6 +7,7 @@ class Person:
         self.yob = yob
 
     def describe(self):
+        """super method"""
         pass
 
 

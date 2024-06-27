@@ -13,10 +13,10 @@ class Softmax(nn.Module):
     def forward(self, x: torch.Tensor, dim=-1):
         if not self.stable:
             x = torch.exp(x)
-            sum = x.sum(dim=dim)
+            out = x.sum(dim=dim)
         else:
             c = torch.max(x, dim=dim)
             x = torch.exp(x - c)
-            sum = x.sum(dim=dim)
+            out = x.sum(dim=dim)
 
-        return x/sum
+        return x/out
