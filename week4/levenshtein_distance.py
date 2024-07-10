@@ -2,6 +2,16 @@ import streamlit as st
 import os
 
 def levenshtein_distance(token1, token2):
+    """
+    Calculates the Levenshtein distance between two input tokens.
+
+    Parameters:
+    token1 (str): The first token.
+    token2 (str): The second token.
+
+    Returns:
+    int: The Levenshtein distance between the two tokens.
+    """
     len_t1, len_t2 = len(token1), len(token2)
     distances = [[0] * (len_t2 + 1) for _ in range(len_t1 + 1)]
 
